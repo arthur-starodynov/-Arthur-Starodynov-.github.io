@@ -30,3 +30,8 @@ my cat is ted. This is ted.
 
 
 Here is a link to the [about](about.html)
+
+
+Plotly page 
+
+here is [plotly](plotly.html) stuff
