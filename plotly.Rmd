@@ -47,7 +47,7 @@ nyc_airbnb |>
 
 
 Lets make a boxplot
-ok
+ok=
 
 ```{r}
 nyc_airbnb |> 
