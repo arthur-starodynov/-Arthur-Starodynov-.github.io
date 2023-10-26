@@ -18,8 +18,10 @@ output:
 **Please click on the below links to view my qualifications and past projects! ** 
 </font> 
 
+$~$ 
+
 <font size="3">
-*About Me -*
+*About Me -- Arthur Starodynov * 
 </font>
 
 I am a first year master's student in Biostatistics at Columbia University. I am experienced in research with a demonstrated history of working in public health data science and medicine. Skilled in R, Python, big data analysis, and SQL. Recent graduate as a Statistics/Data Science and Biology double major from UC Santa Barbara.
