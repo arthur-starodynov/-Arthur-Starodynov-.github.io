@@ -1,44 +1,31 @@
 ---
-title: "Arthur Starodynov"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
+# Welcome
+
+$~$
+
+
+*Please click on the below links to view my qualifications and past projects! *
+
+
+[Resume](about.html)
+
+
+[Github](https://github.com/arthur-starodynov/Compiled_Projects)
+
+
+$~$
 
 
 
 
-# This is my personal website
+# This is me! 
 
 
+![](images/23A4CB12-07B3-4034-9A80-DE72AB532874_1_105_c.jpeg){width=400px}
 
-
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
-
-
-
-*FORMAT*   and **bold** 
-
-
-Please review my resume here [about](about.html)
-
-Here is a link to [p8105](https://p8105.com)
-
-
-# Here is a new section 
-
-
-my cat is ted. This is ted. 
-
-![](images/)
-
-
-
-Here is a link to the [about](about.html)
-
-
-Plotly page 
-
-here is [plotly](plotly.html) stuff
