@@ -1,14 +1,18 @@
 ---
+title: ""
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
+
+<div>
+![](images/biostat.jpeg){class="row" style="float:right;position: relative;padding-top: 30px;" height=15% width=15%}
+</div>
 <font size="7" color="black">
  Welcome 
-</font>
+</font> 
 
-$~$
 
 <font size="4">
 **Please click on the below links to view my qualifications and past projects! ** 

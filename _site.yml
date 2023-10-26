@@ -15,4 +15,3 @@ output:
   html_document:
     theme: yeti
     highlight: textmate
-    css: styles.css
