@@ -4,23 +4,25 @@ output:
     toc: true
     toc_float: true
 ---
-
-# Welcome
+<font size="7" color="black">
+ Welcome 
+</font>
 
 $~$
 
+<font size="4">
+**Please click on the below links to view my qualifications and past projects! ** 
+</font> 
 
-**Please click on the below links to view my qualifications and past projects! **
-
-
+<font size="3">
 *About Me -*
-
+</font>
 
 I am a first year master's student in Biostatistics at Columbia University. I am experienced in research with a demonstrated history of working in public health data science and medicine. Skilled in R, Python, big data analysis, and SQL. Recent graduate as a Statistics/Data Science and Biology double major from UC Santa Barbara.
 
 
 
-[Resume](about.html)
+[Resume & CV](about.html)
 
 
 [Github](https://github.com/arthur-starodynov/Compiled_Projects)

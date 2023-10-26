@@ -6,24 +6,6 @@ output:
     toc_float: true
 ---
 
-$~$ 
-
-# Resume and CV {.tabset .tabset-fade}
-
-## Resume
-$~$ 
-
-$~$ 
-$~$ 
-
-
-
-<center>
-
-![ ](Arthur_Starodynov_Resume.pdf){width=100% height=1000}
-
-</center>
-
 
 ## CV
 
