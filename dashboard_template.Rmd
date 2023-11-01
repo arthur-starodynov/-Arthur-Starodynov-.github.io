@@ -1,0 +1,97 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(data.table)
+library(plotly)
+
+knitr::opts_chunk$set(
+	echo = TRUE,
+	warning = FALSE,
+	fig.width = 8, 
+  fig.height = 6,
+  out.width = "90%"
+)
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+
+rest_df <- 
+  sample_n(rest_inspec, 300) %>%
+  mutate(text_label = str_c("Cuisine", cuisine_description, "Borough", boro)) 
+
+plot_1 <-plot_ly(
+    x = ~cuisine_description, y = ~boro, type = "box", mode = "markers", color = ~critical_flag, data = rest_df
+    )
+
+NOAA_df <- 
+  sample_n(ny_noaa, 300)%>%
+  filter(
+    !is.na(prcp),
+    !is.na(snow),
+    !is.na(snwd),
+    !is.na(tmax),
+    !is.na(tmin)
+  ) %>%
+  janitor::clean_names() %>% 
+  mutate(total_snow = snow + snwd) %>%
+  mutate(text_label = str_c("ID", id))
+  
+
+Plot_2 <- plot_ly (
+    x = ~snow, y = ~id, type = "bar", mode = "markers", text = ~text_label, data = NOAA_df
+  )
+
+insta_df <- 
+  sample_n(instacart, 200) %>%
+  janitor:: clean_names() %>%
+  mutate(text_label = str_c("product_id",product_id , " user_number ", user_id))
+
+plot_3 <-
+  plot_ly(
+    x = ~product_id, y = ~user_id, type = "scatter", mode = "markers",
+    color = ~add_to_cart_order, text = ~text_label, data = insta_df
+  )
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r, echo = FALSE}
+plot_1
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+
+
+### Chart B
+
+```{r, echo = FALSE}
+Plot_2
+```
+
+### Chart C
+
+```{r, echo = FALSE}
+plot_3
+```
+

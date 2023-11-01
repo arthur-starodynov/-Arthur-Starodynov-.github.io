@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<title>Untitled</title>
+
+<meta property="og:title" content="Untitled" />
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+<link rel="icon" href="data:image/x-icon;" type="image/x-icon">
+
+
+<script type="text/javascript">
+window.FlexDashboardComponents = [];
+</script>
+
+<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
+<link href="site_libs/value-box-accent-static-0.6.2/theme-cosmo-value-box.css" rel="stylesheet" />
+<link href="site_libs/flexdashboard-css-0.6.2/flexdashboard.min.css" rel="stylesheet" />
+<link href="site_libs/flexdashboard-css-0.6.2/theme-cosmo.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.3/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<style type="text/css">
+/*
+  CSS for flexdashboard.js' use of Sly(). The sizing/position of this CSS needs to be
+  applied _before_ flexdashboard.js initializes, which is why this CSS has been pulled
+  out from flexdashboard.scss and inlined in the document's head.
+*/
+
+.storyboard-nav button {
+  background: transparent;
+  border: 0;
+  opacity: .3;
+  outline: none;
+  padding: 0;
+}
+
+.storyboard-nav button:hover,
+.storyboard-nav button:hover {
+  opacity: .5;
+}
+
+.storyboard-nav button:disabled,
+.storyboard-nav button:disabled {
+  opacity: .1;
+}
+
+.storyboard-nav .sbnext,
+.storyboard-nav .sbprev {
+  float: left;
+  width: 2%;
+  height: 120px;
+}
+
+.storyboard-nav .sbprev {
+  text-align: left;
+  width: 2%;
+}
+
+.storyboard-nav .sbnext {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.storyboard-nav .sbframelist {
+  margin: 0 auto;
+  width: 94%;
+  height: 120px;
+  overflow: hidden;
+  text-shadow: none;
+  margin-bottom: 8px;
+}
+
+.storyboard-nav .sbframelist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.storyboard-nav .sbframelist ul li {
+  float: left;
+  width: 270px;
+  height: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-right: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.storyboard-nav .sbframelist ul li:last-child {
+  margin-right: 0px;
+}
+
+.sbframe-commentary {
+  width: 300px;
+}
+
+.sbframe-commentary ul {
+  padding-left: 22px;
+}
+
+.sbframe.active {
+  display: flex;
+}
+
+.sbframe:not(.active) {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+html, body {
+  height: 100%;
+}
+
+#dashboard-container {
+  height: 100%;
+}
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+
+<span class="navbar-logo pull-left">
+  
+</span>
+<span class="navbar-brand">
+  Untitled
+  <span class="navbar-author">
+        </span>
+</span>
+
+<button id="navbar-button" type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-left">
+</ul>
+<ul class="nav navbar-nav navbar-right">
+</ul>
+</div><!--/.nav-collapse-->
+</div><!--/.container-->
+</div><!--/.navbar-->
+
+<script type="text/javascript">
+
+
+var FlexDashboard = (function () {
+
+  // initialize options
+  var _options = {};
+
+  var FlexDashboard = function() {
+
+    // default options
+    _options = $.extend(_options, {
+      theme: "cosmo",
+      fillPage: false,
+      orientation: 'columns',
+      storyboard: false,
+      defaultFigWidth: 576,
+      defaultFigHeight: 461,
+      defaultFigWidthMobile: 360,
+      defaultFigHeightMobile: 461,
+      isMobile: false,
+      isPortrait: false,
+      resize_reload: true
+    });
+  };
+
+  function init(options) {
+
+    // extend default options
+    $.extend(true, _options, options);
+
+    // add ids to sections that don't have them (pandoc won't assign ids
+    // to e.g. sections with titles consisting of only chinese characters)
+    var nextId = 1;
+    $('.level1:not([id]),.level2:not([id]),.level3:not([id])').each(function() {
+      $(this).attr('id', 'dashboard-' + nextId++);
+    });
+
+    // find navbar items
+    var navbarItems = $('#flexdashboard-navbar');
+    if (navbarItems.length)
+      navbarItems = JSON.parse(navbarItems.html());
+    addNavbarItems(navbarItems);
+
+    // find the main dashboard container
+    var dashboardContainer = $('#dashboard-container');
+
+    // resolve mobile classes
+    resolveMobileClasses(dashboardContainer);
+
+    // one time global initialization for components
+    componentsInit(dashboardContainer);
+
+    // look for a global sidebar
+    var globalSidebar = dashboardContainer.find(".section.level1.sidebar");
+    if (globalSidebar.length > 0) {
+
+      // global layout for fullscreen displays
+      if (!isMobilePhone()) {
+
+         // hoist it up to the top level
+         globalSidebar.insertBefore(dashboardContainer);
+
+         // lay it out (set width/positions)
+         layoutSidebar(globalSidebar, dashboardContainer);
+
+      // tuck sidebar into first page for mobile phones
+      } else {
+
+        // convert it into a level3 section
+        globalSidebar.removeClass('sidebar');
+        globalSidebar.removeClass('level1');
+        globalSidebar.addClass('level3');
+        var h1 = globalSidebar.children('h1');
+        var h3 = $('<h3></h3>');
+        h3.append(h1.contents());
+        h3.insertBefore(h1);
+        h1.detach();
+
+        // move it into the first page
+        var page = dashboardContainer.find('.section.level1').first();
+        if (page.length > 0)
+          page.prepend(globalSidebar);
+      }
+    }
+
+    // look for pages to layout
+    var pages = $('div.section.level1');
+    if (pages.length > 0) {
+
+        // find the navbar and collapse on clicked
+        var navbar = $('#navbar');
+        navbar.on("click", "a[data-toggle!=dropdown]", null, function () {
+           navbar.collapse('hide');
+        });
+
+        // envelop the dashboard container in a tab content div
+        dashboardContainer.wrapInner('<div class="tab-content"></div>');
+
+        pages.each(function(index) {
+
+          // lay it out
+          layoutDashboardPage($(this));
+
+          // add it to the navbar
+          addToNavbar($(this), index === 0);
+
+        });
+
+    } else {
+
+      // remove the navbar and navbar button if we don't
+      // have any navbuttons
+      if (navbarItems.length === 0) {
+        $('#navbar').remove();
+        $('#navbar-button').remove();
+      }
+
+      // add the storyboard class if requested
+      if (_options.storyboard)
+        dashboardContainer.addClass('storyboard');
+
+      // layout the entire page
+      layoutDashboardPage(dashboardContainer);
+    }
+
+    // if we are in shiny we need to trigger a window resize event to
+    // force correct layout of shiny-bound-output elements
+    if (isShinyDoc())
+      $(window).trigger('resize');
+
+    // make main components visible
+    $('.section.sidebar').css('visibility', 'visible');
+    dashboardContainer.css('visibility', 'visible');
+
+    // handle location hash
+    handleLocationHash();
+
+    // intialize prism highlighting
+    initPrismHighlighting();
+
+    // record mobile and orientation state then register a handler
+    // to refresh if resize_reload is set to true and it changes
+    _options.isMobile = isMobilePhone();
+    _options.isPortrait = isPortrait();
+    if (_options.resize_reload) {
+      $(window).on('resize', function() {
+        if (_options.isMobile !== isMobilePhone() ||
+            _options.isPortrait !== isPortrait()) {
+          window.location.reload();
+        }
+      });
+    } else {
+      // if in desktop mode and resizing to mobile, make sure the heights are 100%
+      // This enforces what `fillpage.css` does for "wider" pages.
+      // Since we are not reloading once the page becomes small, we need to force the height to 100%
+      // This is a new situation introduced when `_options.resize_reload` is `false`
+      if (! _options.isMobile) {
+        // only add if `fillpage.css` was added in the first place
+        if (_options.fillPage) {
+          // fillpage.css
+          $("html,body,#dashboard").css("height", "100%");
+        }
+      }
+    }
+    // trigger layoutcomplete event
+    dashboardContainer.trigger('flexdashboard:layoutcomplete');
+  }
+
+  function resolveMobileClasses(dashboardContainer) {
+     // add top level layout class
+    dashboardContainer.addClass(isMobilePhone() ? 'mobile-layout' :
+                                                  'desktop-layout');
+
+    // look for .mobile sections and add .no-mobile to their peers
+    var mobileSections = $('.section.mobile');
+    mobileSections.each(function() {
+       var id = $(this).attr('id');
+       var nomobileId = id.replace(/-\d+$/, '');
+       $('#' + nomobileId).addClass('no-mobile');
+    });
+  }
+
+  function addNavbarItems(navbarItems) {
+
+    var navbarLeft = $('ul.navbar-left');
+    var navbarRight = $('ul.navbar-right');
+
+    for (var i = 0; i<navbarItems.length; i++) {
+
+      // get the item
+      var item = navbarItems[i];
+
+      // determine the container
+      var container = null;
+      if (item.align === "left")
+        container = navbarLeft;
+      else
+        container = navbarRight;
+
+      // navbar menu if we have multiple items
+      if (item.items) {
+        var menu = navbarMenu(null, item.icon, item.title, container);
+        for (var j = 0; j<item.items.length; j++) {
+          var subItem = item.items[j];
+          var li = $('<li></li>');
+          var a = navbarLink(subItem.icon, subItem.title, subItem.href, subItem.target);
+          a.removeClass("nav-link").addClass("dropdown-item");
+          li.append(a);
+          menu.append(li);
+        }
+      } else {
+        var li = $('<li class="nav-item"></li>');
+        li.append(navbarLink(item.icon, item.title, item.href, item.target));
+        container.append(li);
+      }
+    }
+  }
+
+  // create or get a reference to an existing dropdown menu
+  function navbarMenu(id, icon, title, container) {
+    var existingMenu = [];
+    if (id)
+      existingMenu = container.children('#' + id);
+    if (existingMenu.length > 0) {
+      return existingMenu.children('ul');
+    } else {
+      var li = $('<li class="nav-item"></li>');
+      if (id)
+        li.attr('id', id);
+      li.addClass('dropdown');
+      // auto add "Share" title on mobile if necessary
+      if (!title && icon && (icon === "fa-share-alt") && isMobilePhone())
+        title = "Share";
+      if (title) {
+        title = title + ' <span class="caret"></span>';
+      }
+      var a = navbarLink(icon, title, "#");
+      a.addClass('dropdown-toggle');
+      a.attr('data-toggle', 'dropdown');
+      a.attr('data-bs-toggle', 'dropdown');
+      a.attr('role', 'button');
+      a.attr('aria-expanded', 'false');
+      li.append(a);
+      var ul = $('<ul class="dropdown-menu"></ul>');
+      ul.attr('role', 'menu');
+      li.append(ul);
+      container.append(li);
+      return ul;
+    }
+  }
+
+  function addToNavbar(page, active) {
+
+    // capture the id and data-icon attribute (if any)
+    var id = page.attr('id');
+    var icon = page.attr('data-icon');
+    var navmenu = page.attr('data-navmenu');
+    var navmenuIcon = page.attr('data-navmenu-icon');
+
+    // get hidden state (transfer this to navbar)
+    var hidden = page.hasClass('hidden');
+    page.removeClass('hidden');
+
+    // sanitize the id for use with bootstrap tabs
+    id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+    page.attr('id', id);
+
+    // get the wrapper
+    var wrapper = page.closest('.dashboard-page-wrapper');
+
+    // move the id to the wrapper
+    page.removeAttr('id');
+    wrapper.attr('id', id);
+
+    // add the tab-pane class to the wrapper
+    wrapper.addClass('tab-pane');
+
+    // get a reference to the h1, discover its inner contens, then detach it
+    var h1 = wrapper.find('h1').first();
+    var title = h1.contents();
+    h1.detach();
+
+    // create a navbar item
+    var li = $('<li></li>');
+    var a = navbarLink(icon, title, '#' + id);
+    a.attr('data-toggle', 'tab');
+    a.attr('data-bs-toggle', 'tab');
+    li.append(a);
+
+    // add it to the navbar (or navbar menu if specified)
+    var container = $('ul.navbar-left');
+    if (navmenu) {
+      var menuId = navmenu.replace(/\s+/g, '');
+      var menu = navbarMenu(menuId, navmenuIcon, navmenu, container);
+      li.find("> a").removeClass("nav-link").addClass("dropdown-item");
+      menu.append(li);
+    } else {
+      li.addClass("nav-item")
+      container.append(li);
+    }
+
+    // mark active tab and corresponding nav menu item
+    if (active)
+      $(a).tab("show");
+
+    // hide it if requested
+    if (hidden)
+      li.addClass('hidden');
+  }
+
+  function navbarLink(icon, title, href, target) {
+
+    var a = $('<a class="nav-link"></a>');
+    if (icon) {
+
+      // get the name of the icon set and icon
+      var dashPos = icon.indexOf("-");
+      var iconSet = null;
+      var iconSplit = icon.split(" ");
+      if (iconSplit.length > 1) {
+        iconSet = iconSplit[0];
+        icon = iconSplit.slice(1).join(" ");
+      } else {
+        iconSet = icon.substring(0, dashPos);
+      }
+      var iconName = icon.substring(dashPos + 1);
+
+      // create the icon
+      var iconElement = $('<span class="' + iconSet + ' ' + icon + '"></span>');
+      if (title)
+        iconElement.css('margin-right', '7px');
+      a.append(iconElement);
+      // if href is null see if we can auto-generate based on icon (e.g. social)
+      if (!href)
+        maybeGenerateLinkFromIcon(iconName, a);
+    }
+    if (title)
+      a.append(title);
+
+    // add the href.
+    if (href) {
+      if (href === "source_embed") {
+        a.attr('href', '#');
+        a.attr('data-featherlight', "#flexdashboard-source-code");
+        a.featherlight({
+            beforeOpen: function(event){
+              $('body').addClass('unselectable');
+            },
+            afterClose: function(event){
+              $('body').removeClass('unselectable');
+            }
+        });
+      } else {
+        a.attr('href', href);
+      }
+    }
+
+    // add the arget
+    if (target)
+      a.attr('target', target);
+
+    return a;
+  }
+
+  // auto generate a link from an icon name (e.g. twitter) when possible
+  function maybeGenerateLinkFromIcon(iconName, a) {
+
+     var serviceLinks = {
+      "twitter": "https://twitter.com/share?text=" + encodeURIComponent(document.title) + "&url="+encodeURIComponent(location.href),
+      "facebook": "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(location.href),
+      "linkedin": "https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title),
+      "pinterest": "https://pinterest.com/pin/create/link/?url="+encodeURIComponent(location.href) + "&description=" + encodeURIComponent(document.title)
+    };
+
+    var makeSocialLink = function(a, href) {
+      a.attr('href', '#');
+      a.on('click', function(e) {
+        e.preventDefault();
+        window.open(href);
+      });
+    };
+
+    $.each(serviceLinks, function(key, value) {
+      if (iconName.indexOf(key) !== -1)
+        makeSocialLink(a, value);
+    });
+  }
+
+  // layout a dashboard page
+  function layoutDashboardPage(page) {
+
+    // use a page wrapper so that free form content above the
+    // dashboard appears at the top rather than the side (as it
+    // would without the wrapper in a column orientation)
+    var wrapper = $('<div class="dashboard-page-wrapper"></div>');
+    page.wrap(wrapper);
+
+    // if there are no level2 or level3 headers synthesize a level3
+    // header to contain the (e.g. frame it, scroll container, etc.)
+    var headers = page.find('h2,h3');
+    if (headers.length === 0)
+      page.wrapInner('<div class="section level3"></div>');
+
+    // hoist up any content before level 2 or level 3 headers
+    var children = page.children();
+    children.each(function(index) {
+      if ($(this).hasClass('level2') || $(this).hasClass('level3'))
+        return false;
+      $(this).insertBefore(page);
+    });
+
+    // determine orientation and fillPage behavior for distinct media
+    var orientation, fillPage, storyboard;
+
+    // media: mobile phone
+    if (isMobilePhone()) {
+
+      // if there is a sidebar we need to ensure it's content
+      // is properly framed as an h3
+      var sidebar = page.find('.section.sidebar');
+      sidebar.removeClass('sidebar');
+      sidebar.wrapInner('<div class="section level3"></div>');
+      var h2 = sidebar.find('h2');
+      var h3 = $('<h3></h3>');
+      h3.append(h2.contents());
+      h3.insertBefore(h2);
+      h2.detach();
+
+      // wipeout h2 elements then enclose them in a single h2
+      var level2 = page.find('div.section.level2');
+      level2.each(function() {
+        level2.children('h2').remove();
+        level2.children().unwrap();
+      });
+      page.wrapInner('<div class="section level2"></div>');
+
+      // substitute mobile images
+      if (isPortrait()) {
+        var mobileFigures = $('img.mobile-figure');
+        mobileFigures.each(function() {
+          // get the src (might be base64 encoded)
+          var src = $(this).attr('src');
+
+          // find it's peer
+          var id = $(this).attr('data-mobile-figure-id');
+          var img = $('img[data-figure-id=' + id + "]");
+          img.attr('src', src)
+             .attr('width', _options.defaultFigWidthMobile)
+             .attr('height', _options.defaultFigHeightMobile);
+        });
+      }
+
+      // hoist storyboard commentary into it's own section
+      if (page.hasClass('storyboard')) {
+        var commentaryHR = page.find('div.section.level3 hr');
+        commentaryHR.each(function() {
+          var commentary = $(this).nextAll().detach();
+          var commentarySection = $('<div class="section level3"></div>');
+          commentarySection.append(commentary);
+          commentarySection.insertAfter($(this).closest('div.section.level3'));
+          $(this).remove();
+        });
+      }
+
+      // force a non full screen layout by columns
+      orientation = _options.orientation = 'columns';
+      fillPage = _options.fillPage = false;
+      storyboard = _options.storyboard = false;
+
+    // media: desktop
+    } else {
+
+      // determine orientation
+      orientation = page.attr('data-orientation');
+      if (orientation !== 'rows' && orientation != 'columns')
+        orientation = _options.orientation;
+
+      // determine storyboard mode
+      storyboard = page.hasClass('storyboard');
+
+      // fillPage based on options (force for storyboard)
+      fillPage = _options.fillPage || storyboard;
+
+      // handle sidebar
+      var sidebar = page.find('.section.level2.sidebar');
+      if (sidebar.length > 0)
+        layoutSidebar(sidebar, page);
+    }
+
+    // give it and it's parent divs height: 100% if we are in fillPage mode
+    if (fillPage) {
+      page.addClass('vertical-layout-fill');
+      page.css('height', '100%');
+      page.parents('div').css('height', '100%');
+    } else {
+      page.addClass('vertical-layout-scroll');
+    }
+
+    // perform the layout
+    if (storyboard)
+      layoutPageAsStoryboard(page);
+    else if (orientation === 'rows')
+      layoutPageByRows(page, fillPage);
+    else if (orientation === 'columns')
+      layoutPageByColumns(page, fillPage);
+  }
+
+  function layoutSidebar(sidebar, content) {
+
+    // get it out of the header hierarchy
+    sidebar = sidebar.first();
+    if (sidebar.hasClass('level1')) {
+      sidebar.removeClass('level1');
+      sidebar.children('h1').remove();
+    } else if (sidebar.hasClass('level2')) {
+      sidebar.removeClass('level2');
+      sidebar.children('h2').remove();
+    }
+
+    // determine width
+    var sidebarWidth = isTablet() ? 220 : 250;
+    var dataWidth = parseInt(sidebar.attr('data-width'));
+    if (dataWidth)
+      sidebarWidth = dataWidth;
+
+    // set the width and shift the page right to accomodate the sidebar
+    sidebar.css('width', sidebarWidth + 'px');
+    content.css('padding-left', sidebarWidth + 'px');
+
+    // wrap it's contents in a form
+    sidebar.wrapInner($('<form></form>'));
+  }
+
+  function layoutPageAsStoryboard(page) {
+
+    // create storyboard navigation
+    var nav = $('<div class="storyboard-nav"></div>');
+
+    // add navigation buttons
+    var prev = $('<button class="sbprev"><i class="fa fa-angle-left"></i></button>');
+    nav.append(prev);
+    var next= $('<button class="sbnext"><i class="fa fa-angle-right"></i></button>');
+    nav.append(next);
+
+    // add navigation frame
+    var frameList = $('<div class="sbframelist"></div>');
+    nav.append(frameList);
+    var ul = $('<ul></ul>');
+    frameList.append(ul);
+
+     // find all the level3 sections (those are the storyboard frames)
+    var frames = page.find('div.section.level3');
+    frames.each(function() {
+
+      // mark it
+      $(this).addClass('sbframe');
+
+      // divide it into chart content and (optional) commentary
+      $(this).addClass('dashboard-column-orientation');
+
+      // stuff the chart into it's own div w/ flex
+      $(this).wrapInner('<div class="sbframe-component"></div>');
+      setFlex($(this), 1);
+      var frame = $(this).children('.sbframe-component');
+
+      // extract the title from the h3
+      var li = $('<li></li>');
+      var h3 = frame.children('h3');
+      li.append(h3.contents());
+      h3.detach();
+      ul.append(li);
+
+      // extract commentary
+      var hr = frame.children('hr');
+      if (hr.length) {
+        var commentary = hr.nextAll().detach();
+        hr.remove();
+        var commentaryFrame = $('<div class="sbframe-commentary"></div>');
+        commentaryFrame.addClass('flowing-content-shim');
+        commentaryFrame.addClass('flowing-content-container');
+        commentaryFrame.append(commentary);
+        $(this).append(commentaryFrame);
+
+        // look for a data-commentary-width attribute
+        var commentaryWidth = $(this).attr('data-commentary-width');
+        if (commentaryWidth)
+          commentaryFrame.css('width', commentaryWidth + 'px');
+      }
+
+      // layout the chart (force flex)
+      var result = layoutChart(frame, true);
+
+      // ice the notes if there are none
+      if (!result.notes)
+        frame.find('.chart-notes').remove();
+
+      // set flex on chart
+      setFlex(frame, 1);
+    });
+
+    // create a div to hold all the frames
+    var frameContent = $('<div class="sbframe-content"></div>');
+    frameContent.addClass('dashboard-row-orientation');
+    frameContent.append(frames.detach());
+
+    // row orientation to stack nav and frame content
+    page.addClass('dashboard-row-orientation');
+    page.append(nav);
+    page.append(frameContent);
+    setFlex(frameContent, 1);
+
+    // initialize sly
+    var sly = new Sly(frameList, {
+    		horizontal: true,
+    		itemNav: 'basic',
+    		smart: true,
+    		activateOn: 'click',
+    		startAt: 0,
+    		scrollBy: 1,
+    		activatePageOn: 'click',
+    		speed: 200,
+    		moveBy: 600,
+    		dragHandle: true,
+    		dynamicHandle: true,
+    		clickBar: true,
+    		keyboardNavBy: 'items',
+    		next: next,
+    		prev: prev
+    	}).init();
+
+    // make first frame active
+    frames.removeClass('active');
+    frames.first().addClass('active');
+
+    // subscribe to frame changed events
+    sly.on('active', function (eventName, itemIndex) {
+      frames.removeClass('active');
+      frames.eq(itemIndex).addClass('active')
+                          .trigger('shown');
+    });
+  }
+
+  function layoutPageByRows(page, fillPage) {
+
+    // row orientation
+    page.addClass('dashboard-row-orientation');
+
+    // find all the level2 sections (those are the rows)
+    var rows = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (rows.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      rows = page.find('div.section.level2');
+    }
+
+    rows.each(function () {
+
+      // flags
+      var haveNotes = false;
+      var haveFlexHeight = true;
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // give it row layout semantics if it's not a tabset
+      if (!isTabset)
+        $(this).addClass('dashboard-row');
+
+      // find all of the level 3 subheads
+      var columns = $(this).find('div.section.level3');
+
+      // determine figureSizes sizes
+      var figureSizes = chartFigureSizes(columns);
+
+      // fixup the columns
+      columns.each(function(index) {
+
+        // layout the chart (force flex if we are in a tabset)
+        var result = layoutChart($(this), isTabset);
+
+        // update flexHeight state
+        if (!result.flex)
+          haveFlexHeight = false;
+
+        // update state
+        if (result.notes)
+          haveNotes = true;
+
+        // set the column flex based on the figure width
+        // (value boxes will just get the default figure width)
+        var chartWidth = figureSizes[index].width;
+        setFlex($(this), chartWidth + ' ' + chartWidth + ' 0px');
+
+      });
+
+      // remove empty chart note divs
+      if (isTabset)
+        $(this).find('.chart-notes').filter(function() {
+            return $(this).html() === "&nbsp;";
+        }).remove();
+      if (!haveNotes)
+        $(this).find('.chart-notes').remove();
+
+       // make it a flexbox row
+      if (haveFlexHeight)
+        $(this).addClass('dashboard-row-flex');
+
+      // now we can set the height on all the wrappers (based on maximum
+      // figure height + room for title and notes, or data-height on the
+      // container if specified). However, don't do this if there is
+      // no flex on any of the constituent columns
+      var flexHeight = null;
+      var dataHeight = parseInt($(this).attr('data-height'));
+      if (dataHeight)
+        flexHeight = adjustedHeight(dataHeight, columns.first());
+      else if (haveFlexHeight)
+        flexHeight = maxChartHeight(figureSizes, columns);
+      if (flexHeight) {
+        if (fillPage)
+          setFlex($(this), flexHeight + ' ' + flexHeight + ' 0px');
+        else {
+          $(this).css('height', flexHeight + 'px');
+          setFlex($(this), '0 0 ' + flexHeight + 'px');
+        }
+      }
+
+    });
+  }
+
+  function layoutPageByColumns(page, fillPage) {
+
+    // column orientation
+    page.addClass('dashboard-column-orientation');
+
+    // find all the level2 sections (those are the columns)
+    var columns = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (columns.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      columns = page.find('div.section.level2');
+    }
+
+    // layout each column
+    columns.each(function (index) {
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // make it a flexbox column
+      $(this).addClass('dashboard-column');
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // find all the h3 elements
+      var rows = $(this).find('div.section.level3');
+
+      // get the figure sizes for the rows
+      var figureSizes = chartFigureSizes(rows);
+
+      // column flex is the max row width (or data-width if specified)
+      var flexWidth;
+      var dataWidth = parseInt($(this).attr('data-width'));
+      if (dataWidth)
+        flexWidth = dataWidth;
+      else
+        flexWidth = maxChartWidth(figureSizes);
+      setFlex($(this), flexWidth + ' ' + flexWidth + ' 0px');
+
+      // layout each chart
+      rows.each(function(index) {
+
+        // perform the layout
+        var result = layoutChart($(this), false);
+
+        // ice the notes if there are none
+        if (!result.notes)
+          $(this).find('.chart-notes').remove();
+
+        // set flex height based on figHeight, then adjust
+        if (result.flex) {
+          var chartHeight = figureSizes[index].height;
+          chartHeight = adjustedHeight(chartHeight, $(this));
+          if (fillPage)
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' 0px');
+          else {
+            $(this).css('height', chartHeight + 'px');
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' ' + chartHeight + 'px');
+          }
+        }
+      });
+    });
+  }
+
+  function chartFigureSizes(charts) {
+
+    // sizes
+    var figureSizes = new Array(charts.length);
+
+    // check each chart
+    charts.each(function(index) {
+
+      // start with default
+      figureSizes[index] = {
+        width: _options.defaultFigWidth,
+        height: _options.defaultFigHeight
+      };
+
+      // look for data-height or data-width then knit options
+      var dataWidth = parseInt($(this).attr('data-width'));
+      var dataHeight = parseInt($(this).attr('data-height'));
+      var knitrOptions = $(this).find('.knitr-options:first');
+      var knitrWidth, knitrHeight;
+      if (knitrOptions) {
+        knitrWidth = parseInt(knitrOptions.attr('data-fig-width'));
+        knitrHeight =  parseInt(knitrOptions.attr('data-fig-height'));
+      }
+
+      // width
+      if (dataWidth)
+        figureSizes[index].width = dataWidth;
+      else if (knitrWidth)
+        figureSizes[index].width = knitrWidth;
+
+      // height
+      if (dataHeight)
+        figureSizes[index].height = dataHeight;
+      else if (knitrHeight)
+        figureSizes[index].height = knitrHeight;
+    });
+
+    // return sizes
+    return figureSizes;
+  }
+
+  function maxChartHeight(figureSizes, charts) {
+
+    // first compute the maximum height
+    var maxHeight = _options.defaultFigHeight;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].height > maxHeight)
+        maxHeight = figureSizes[i].height;
+
+    // now add offests for chart title and chart notes
+    if (charts.length)
+      maxHeight = adjustedHeight(maxHeight, charts.first());
+
+    return maxHeight;
+  }
+
+  function adjustedHeight(height, chart) {
+    if (chart.length > 0) {
+      var chartTitle = chart.find('.chart-title');
+      if (chartTitle.length)
+        height += chartTitle.first().outerHeight();
+      var chartNotes = chart.find('.chart-notes');
+      if (chartNotes.length)
+        height += chartNotes.first().outerHeight();
+    }
+    return height;
+  }
+
+  function maxChartWidth(figureSizes) {
+    var maxWidth = _options.defaultFigWidth;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].width > maxWidth)
+        maxWidth = figureSizes[i].width;
+    return maxWidth;
+  }
+
+  // layout a chart
+  function layoutChart(chart, forceFlex) {
+
+    // state to return
+    var result = {
+      notes: false,
+      flex: false
+    };
+
+    // extract the title
+    var title = extractTitle(chart);
+
+    // find components that apply to this container
+    var components = componentsFind(chart);
+
+    // if it's a custom component then call it and return
+    var customComponents = componentsCustom(components);
+    if (customComponents.length) {
+      componentsLayout(customComponents, title, chart);
+      result.notes = false;
+      result.flex = forceFlex || componentsFlex(customComponents);
+      return result;
+    }
+
+    // put all the content in a chart wrapper div
+    chart.addClass('chart-wrapper');
+    chart.wrapInner('<div class="chart-stage"></div>');
+    var chartContent = chart.children('.chart-stage');
+
+    // flex the content if appropriate
+    result.flex = forceFlex || componentsFlex(components);
+    if (result.flex) {
+      // add flex classes
+      chart.addClass('chart-wrapper-flex');
+      chartContent.addClass('chart-stage-flex');
+
+      // additional shim to break out of flexbox sizing
+      chartContent.wrapInner('<div class="chart-shim"></div>');
+      chartContent = chartContent.children('.chart-shim');
+    }
+
+    // set custom data-padding attribute
+    var pad = chart.attr('data-padding');
+    if (pad) {
+      if (pad === "0")
+        chart.addClass('no-padding');
+      else {
+        pad = pad + 'px';
+        chartContent.css('left', pad)
+                    .css('top', pad)
+                    .css('right', pad)
+                    .css('bottom', pad)
+      }
+    }
+
+    // call compoents
+    componentsLayout(components, title, chartContent);
+
+    // also activate components on shiny output
+    findShinyOutput(chartContent).on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+
+          // see if we opted out of flex based on our output (for shiny
+          // we can't tell what type of output we have until after the
+          // value is bound)
+          var components = componentsFind(element);
+          var flex = forceFlex || componentsFlex(components);
+          if (!flex) {
+            chart.css('height', "");
+            setFlex(chart, "");
+            chart.removeClass('chart-wrapper-flex');
+            chartContent.removeClass('chart-stage-flex');
+            chartContent.children().unwrap();
+          }
+
+          // perform layout
+          componentsLayout(components, title, element.parent());
+        }, 10);
+      });
+
+    // add the title
+    var chartTitle = $('<div class="chart-title"></div>');
+    chartTitle.append(title);
+    chart.prepend(chartTitle);
+
+    // add the notes section
+    var chartNotes = $('<div class="chart-notes"></div>');
+    chartNotes.html('&nbsp;');
+    chart.append(chartNotes);
+
+    // attempt to extract notes if we have a component
+    if (components.length)
+      result.notes = extractChartNotes(chartContent, chartNotes);
+
+    // return result
+    return result;
+  }
+
+  // build a tabset from a section div with the .tabset class
+  function layoutTabset(tabset) {
+
+    // check for fade option
+    var fade = tabset.hasClass("tabset-fade");
+    var pills = tabset.hasClass("tabset-pills");
+    var navClass = pills ? "nav-pills" : "nav-tabs";
+
+    // determine the heading level of the tabset and tabs
+    var match = tabset.attr('class').match(/level(\d) /);
+    if (match === null)
+      return;
+    var tabsetLevel = Number(match[1]);
+    var tabLevel = tabsetLevel + 1;
+
+    // find all subheadings immediately below
+    var tabs = tabset.find("div.section.level" + tabLevel);
+    if (!tabs.length)
+      return;
+
+    // create tablist and tab-content elements
+    var tabList = $('<ul class="nav ' + navClass + '" role="tablist"></ul>');
+    $(tabs[0]).before(tabList);
+    var tabContent = $('<div class="tab-content"></div>');
+    $(tabs[0]).before(tabContent);
+
+    // build the tabset
+    var activeTab = 0;
+    tabs.each(function(i) {
+
+      // get the tab div
+      var tab = $(tabs[i]);
+
+      // get the id then sanitize it for use with bootstrap tabs
+      var id = tab.attr('id');
+
+      // see if this is marked as the active tab
+      if (tab.hasClass('active'))
+        activeTab = i;
+
+      // sanitize the id for use with bootstrap tabs
+      id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+      tab.attr('id', id);
+
+      // get the heading element within it and grab it's text
+      var heading = tab.find('h' + tabLevel + ':first');
+      var headingDom = heading.contents();
+
+      // build and append the tab list item
+      var a = $('<a role="tab" data-toggle="tab" data-bs-toggle="tab" class="nav-link"></a>');
+      a.append(headingDom);
+      a.attr('href', '#' + id);
+      a.attr('aria-controls', id);
+      var li = $('<li role="presentation" class="nav-item"></li>');
+      li.append(a);
+      tabList.append(li);
+
+      // set it's attributes
+      tab.attr('role', 'tabpanel');
+      tab.addClass('tab-pane');
+      tab.addClass('tabbed-pane');
+      tab.addClass('no-title');
+      if (fade)
+        tab.addClass('fade');
+
+      // move it into the tab content div
+      tab.detach().appendTo(tabContent);
+    });
+
+    // set active tab
+    $(tabList.children()[activeTab]).tab("show");
+    var active = $(tabContent.children('div.section')[activeTab]);
+    active.addClass('active');
+    if (fade)
+      active.addClass('in');
+
+    // add nav-tabs-custom
+    tabset.addClass('nav-tabs-custom');
+
+    // internal layout is dashboard-column with tab-content flexing
+    tabset.addClass('dashboard-column');
+    setFlex(tabContent, 1);
+  }
+
+  // one time global initialization for components
+  function componentsInit(dashboardContainer) {
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.init)
+        component.init(dashboardContainer);
+    }
+  }
+
+  // find components that apply within a container
+  function componentsFind(container) {
+
+    // look for components
+    var components = [];
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.find(container).length)
+        components.push(component);
+    }
+
+    // if there were none then use a special flowing content component
+    // that just adds a scrollbar in fillPage mode
+    if (components.length == 0) {
+      components.push({
+        find: function(container) {
+          return container;
+        },
+
+        flex: function(fillPage) {
+          return fillPage;
+        },
+
+        layout: function(title, container, element, fillPage) {
+          if (fillPage) {
+            container.addClass('flowing-content-shim');
+            container.addClass('flowing-content-container');
+          }
+        }
+      });
+    }
+
+    return components;
+  }
+
+  // if there is a custom component then pick it out
+  function componentsCustom(components) {
+    var customComponent = [];
+    for (var i=0; i<components.length; i++)
+      if (components[i].type === "custom") {
+        customComponent.push(components[i]);
+        break;
+      }
+    return customComponent;
+  }
+
+  // query all components for flex
+  function componentsFlex(components) {
+
+    // no components at all means no flex
+    if (components.length === 0)
+      return false;
+
+    // otherwise query components (assume true unless we see false)
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++)
+      if (components[i].flex && !components[i].flex(_options.fillPage))
+        return false;
+    return true;
+  }
+
+  // layout all components
+  function componentsLayout(components, title, container) {
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++) {
+      var element = components[i].find(container);
+      if (components[i].layout) {
+        // call layout (don't call other components if it returns false)
+        var result = components[i].layout(title, container, element, _options.fillPage);
+        if (result === false)
+          return;
+      }
+    }
+  }
+
+  // get a reference to the h3, discover it's inner html, and remove it
+  function extractTitle(container) {
+    var h3 = container.children('h3').first();
+    var title = '';
+    if (!container.hasClass('no-title'))
+      title = h3.contents();
+    h3.detach();
+    return title;
+  }
+
+  // extract chart notes
+  function extractChartNotes(chartContent, chartNotes) {
+    // look for a terminating blockquote or image caption
+    var blockquote = chartContent.children('blockquote:last-child');
+    var caption = chartContent.children('div.image-container')
+                              .children('p.caption');
+    if (blockquote.length) {
+      chartNotes.empty().append(blockquote.children('p:first-child').contents());
+      blockquote.remove();
+      return true;
+    } else if (caption.length) {
+      chartNotes.empty().append(caption.contents());
+      caption.remove();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function findShinyOutput(chartContent) {
+    return chartContent.find('.shiny-text-output, .shiny-html-output');
+  }
+
+  // safely detect rendering on a mobile phone
+  function isMobilePhone() {
+    try
+    {
+      return ! window.matchMedia("only screen and (min-width: 768px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  function isFillPage() {
+    return _options.fillPage;
+  }
+
+  // detect portrait mode
+  function isPortrait() {
+    return ($(window).width() < $(window).height());
+  }
+
+  // safely detect rendering on a tablet
+  function isTablet() {
+    try
+    {
+      return window.matchMedia("only screen and (min-width: 769px) and (max-width: 992px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  // test whether this is a shiny doc
+  function isShinyDoc() {
+    return (typeof(window.Shiny) !== "undefined" && !!window.Shiny.outputBindings);
+  }
+
+  // set flex using vendor specific prefixes
+  function setFlex(el, flex) {
+    el.css('-webkit-box-flex', flex)
+      .css('-webkit-flex', flex)
+      .css('-ms-flex', flex)
+      .css('flex', flex);
+  }
+
+  // support bookmarking of pages
+  function handleLocationHash() {
+
+    // restore tab/page from bookmark
+    var hash = window.decodeURIComponent(window.location.hash);
+    if (hash.length > 0) {
+      // Update the tab without .showPage() so that we don't change page history
+      $('ul.nav a[href="' + hash + '"]').tab('show');
+    }
+
+    // navigate to a tab when the history changes
+    window.addEventListener("popstate", function(e) {
+      var hash = window.decodeURIComponent(window.location.hash);
+      var activeTab = $('ul.nav a[href="' + hash + '"]');
+      if (activeTab.length) {
+        activeTab.tab('show');
+      } else {
+        // returning to the base page URL without a hash activates first tab
+        $('ul.nav a:first').tab('show');
+      }
+    });
+
+    // add a hash to the URL when the user clicks on a tab/page
+    $('.navbar-nav a[data-toggle="tab"]').on('click', function(e) {
+      var baseUrl = FlexDashboardUtils.urlWithoutHash(window.location.href);
+      var hash = FlexDashboardUtils.urlHash($(this).attr('href'));
+      var href = baseUrl + hash;
+      FlexDashboardUtils.setLocation(href);
+    });
+
+    // handle clicks of other links that should activate pages
+    var navPages = $('ul.navbar-nav li a[data-toggle=tab]');
+    navPages.each(function() {
+      var href =  $(this).attr('href');
+      var links = $('a[href="' + href + '"][data-toggle!=tab]');
+      links.each(function() {
+        $(this).on('click', function(e) {
+          window.FlexDashboardUtils.showPage(href);
+        });
+      });
+    });
+  }
+
+  // tweak Prism highlighting
+  function initPrismHighlighting() {
+
+    if (window.Prism) {
+      Prism.languages.insertBefore('r', 'comment', {
+        'heading': [
+          {
+            // title 1
+        	  // =======
+
+        	  // title 2
+        	  // -------
+        	  pattern: /\w+.*(?:\r?\n|\r)(?:====+|----+)/,
+            alias: 'operator'
+          },
+          {
+            // ### title 3
+            pattern: /(^\s*)###[^#].+/m,
+            lookbehind: true,
+            alias: 'operator'
+          }
+        ]
+      });
+
+      // prism highlight
+      Prism.highlightAll();
+    }
+  }
+
+  FlexDashboard.prototype = {
+    constructor: FlexDashboard,
+    init: init,
+    isMobilePhone: isMobilePhone,
+    isFillPage: isFillPage
+  };
+
+  return FlexDashboard;
+
+})();
+
+// utils
+window.FlexDashboardUtils = {
+  resizableImage: function(img) {
+    var src = img.attr('src');
+    var url = 'url("' + src + '")';
+    img.parent().css('background', url)
+                .css('background-size', 'contain')
+                .css('background-repeat', 'no-repeat')
+                .css('background-position', 'center')
+                .addClass('image-container');
+  },
+  setLocation: function(href) {
+    if (history && history.pushState) {
+      history.pushState(null, null, href);
+    } else {
+      window.location.replace(href);
+    }
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 10);
+  },
+  showPage: function(href) {
+    $('ul.navbar-nav li a[href="' + href + '"]').tab('show');
+    var baseUrl = this.urlWithoutHash(window.location.href);
+    var loc = baseUrl + href;
+    this.setLocation(loc);
+  },
+  showLinkedValue: function(href) {
+    // check for a page link
+    if ($('ul.navbar-nav li a[data-toggle=tab][href="' + href + '"]').length > 0)
+      this.showPage(href);
+    else
+      window.open(href);
+  },
+  urlWithoutHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(0, hashLoc);
+    else
+      return url;
+  },
+  urlHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(hashLoc);
+    else
+      return "";
+  }
+};
+
+window.FlexDashboard = new FlexDashboard();
+
+// empty content
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    if (container.find('p').length == 0)
+      return container;
+    else
+      return $();
+  }
+})
+
+// plot image
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('p')
+                    .children('img:only-child');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// plot image (figure style)
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.figure').children('img');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// htmlwidget
+window.FlexDashboardComponents.push({
+
+  init: function(dashboardContainer) {
+    // trigger "shown" after initial layout to force static htmlwidgets
+    // in runtime: shiny to be resized after the dom has been transformed
+    dashboardContainer.on('flexdashboard:layoutcomplete', function(event) {
+      setTimeout(function() {
+        dashboardContainer.trigger('shown');
+      }, 200);
+    });
+  },
+
+  find: function(container) {
+    return container.children('div[id^="htmlwidget-"],div.html-widget');
+  }
+});
+
+// gauge
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.html-widget.gauge');
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+
+  }
+
+});
+
+// shiny output
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    return container.children('div[class^="shiny-"]');
+  }
+});
+
+// bootstrap table
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    var bsTable = container.find('table.table');
+    if (bsTable.length !== 0)
+      return bsTable;
+    else
+      return container.find('tr.header').parent('thead').parent('table');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var bsTable = element;
+
+    // fixup xtable generated tables with a proper thead
+    var headerRow = bsTable.find('tbody > tr:first-child > th').parent();
+    if (headerRow.length > 0) {
+      var thead = $('<thead></thead>');
+      bsTable.prepend(thead);
+      headerRow.detach().appendTo(thead);
+    }
+
+    // improve appearance
+    container.addClass('bootstrap-table');
+
+    // for fill page provide scrolling w/ sticky headers
+    if (fillPage) {
+      // force scrollbar on overflow
+      container.addClass('flowing-content-shim');
+
+      // stable table headers when scrolling
+      bsTable.stickyTableHeaders({
+        scrollableArea: container
+      });
+    }
+  }
+});
+
+// embedded shiny app
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('iframe.shiny-frame');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage) {
+      element.attr('height', '100%');
+    } else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (!height)
+        height = element.attr('height');
+      if (!height)
+        element.attr('height', 500);
+    }
+  }
+});
+
+// shiny fillRow or fillCol
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('.flexfill-container');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage)
+      element.css('height', '100%');
+    else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (height === "100%" || height === "auto" || height === "initial" ||
+          height === "inherit" || !height) {
+        element.css('height', 500);
+      }
+    }
+  }
+});
+
+// valueBox
+window.FlexDashboardComponents.push({
+
+  type: "custom",
+
+  find: function(container) {
+    if (container.find('span.value-output, .shiny-valuebox-output').length)
+      return container;
+    else
+      return $();
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var chartTitle = title;
+    var valueBox = element;
+
+    // add value-box class to container
+    container.addClass('value-box');
+
+    // value paragraph
+    var value = $('<p class="value"></p>');
+
+    // if we have shiny-text-output then just move it in
+    var valueOutputSpan = [];
+    var shinyOutput = valueBox.find('.shiny-valuebox-output').detach();
+    if (shinyOutput.length) {
+      valueBox.children().remove();
+      shinyOutput.html("&mdash;");
+      value.append(shinyOutput);
+    } else {
+      // extract the value (remove leading vector index)
+      var chartValue = valueBox.text().trim();
+      chartValue = chartValue.replace("[1] ", "");
+      valueOutputSpan = valueBox.find('span.value-output').detach();
+      valueBox.children().remove();
+      value.text(chartValue);
+    }
+
+    // caption
+    var caption = $('<p class="caption"></p>');
+    caption.append(chartTitle);
+
+    // build inner div for value box and add it
+    var inner = $('<div class="inner"></div>');
+    inner.append(value);
+    inner.append(caption);
+    valueBox.append(inner);
+
+    // add icon if specified
+    var icon = $('<div class="icon"><i></i></div>');
+    valueBox.append(icon);
+    function setIcon(chartIcon) {
+      var iconLib = "";
+      var iconSplit = chartIcon.split(" ");
+      if (iconSplit.length > 1) {
+        iconLib = iconSplit[0];
+        chartIcon = iconSplit.slice(1).join(" ");
+      } else {
+        var components = chartIcon.split("-");
+        if (components.length > 1)
+          iconLib = components[0];
+      }
+      icon.children('i').attr('class', iconLib + ' ' + chartIcon);
+    }
+    var chartIcon = valueBox.attr('data-icon');
+    if (chartIcon)
+      setIcon(chartIcon);
+
+    // handle data attributes in valueOutputSpan
+    function handleValueOutput(valueOutput) {
+
+      // caption
+      var dataCaption = valueOutput.attr('data-caption');
+      if (dataCaption)
+        caption.html(dataCaption);
+
+      // icon
+      var dataIcon = valueOutput.attr('data-icon');
+      if (dataIcon)
+        setIcon(dataIcon);
+
+      // If valueBox(color=) was an accent color, this attr should
+      // be populated with the accent color and the relevant CSS comes
+      // in through HTML dependencies
+      var dataColorAccent = valueOutput.attr('data-color-accent');
+      var valueBoxClasses = "value-box-" + (["primary", "info", "danger", "warning", "success"].join(" value-box-"));
+      if (dataColorAccent) {
+        valueBox.removeClass(valueBoxClasses);
+        valueBox.addClass('value-box-' + dataColorAccent);
+      }
+
+      // If valueBox(color=) was a CSS color, these other data-color-*
+      // attrs will be populated
+      var dataColor = valueOutput.attr('data-color');
+      if (dataColor) {
+        valueBox.removeClass(valueBoxClasses);
+        valueBox.css('background-color', dataColor);
+      }
+      var dataColorText = valueOutput.attr('data-color-text');
+      if (dataColorText) {
+        valueBox.find(".inner").css('color', dataColorText);
+      }
+      var dataColorIcon = valueOutput.attr('data-color-icon');
+      if (dataColorIcon) {
+        valueBox.find(".icon").css('color', dataColorIcon);
+      }
+
+      // url
+      var dataHref = valueOutput.attr('data-href');
+      if (dataHref) {
+        valueBox.addClass('linked-value');
+        valueBox.off('click.value-box');
+        valueBox.on('click.value-box', function(e) {
+          window.FlexDashboardUtils.showLinkedValue(dataHref);
+        });
+      }
+    }
+
+    // check for a valueOutputSpan
+    if (valueOutputSpan.length > 0) {
+      handleValueOutput(valueOutputSpan);
+    }
+
+    // if we have a shinyOutput then bind a listener to handle
+    // new valueOutputSpan values
+    shinyOutput.on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+          var valueOutputSpan = element.find('span.value-output');
+          if (valueOutputSpan.length > 0)
+            handleValueOutput(valueOutputSpan);
+        }, 10);
+      }
+    );
+  }
+});
+</script>
+
+<div id="dashboard-container">
+
+<div id="column" class="section level2" data-width="650">
+<h2>Column</h2>
+<div id="chart-a" class="section level3">
+<h3>Chart A</h3>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-458ba76ae623decc3fd4" style="width:90%;height:576px;"></div>
+<script type="application/json" data-for="htmlwidget-458ba76ae623decc3fd4">{"x":{"visdat":{"8a2442046e2":["function () ","plotlyVisDat"]},"cur_data":"8a2442046e2","attrs":{"8a2442046e2":{"x":{},"y":{},"mode":"markers","color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"box"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"cuisine_description","type":"category","categoryorder":"array","categoryarray":["American","Asian","Bagels/Pretzels","Bakery","Bangladeshi","Barbecue","Bottled beverages, including water, sodas, juices, etc.","CafÃ©/Coffee/Tea","Caribbean","Chicken","Chinese","Chinese/Japanese","Creole","Delicatessen","Donuts","Eastern European","German","Greek","Hamburgers","Ice Cream, Gelato, Yogurt, Ices","Indian","Irish","Italian","Japanese","Jewish/Kosher","Juice, Smoothies, Fruit Salads","Korean","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Mediterranean","Mexican","Middle Eastern","Other","Pakistani","Peruvian","Pizza","Pizza/Italian","Polish","Russian","Sandwiches","Sandwiches/Salads/Mixed Buffet","Seafood","Soul Food","Soups & Sandwiches","Spanish","Steak","Tapas","Tex-Mex","Thai","Turkish","Vietnamese/Cambodian/Malaysia"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"boro","type":"category","categoryorder":"array","categoryarray":["BRONX","BROOKLYN","MANHATTAN","QUEENS","STATEN ISLAND"]},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"fillcolor":"rgba(102,194,165,0.5)","x":["Chinese","Indian","Vietnamese/Cambodian/Malaysia","Seafood","Chinese","Korean","Chinese","Italian","Pizza","Greek","Chinese","Chinese","Asian","American","Chinese","Bakery","Pakistani","Greek","American","Bakery","Bottled beverages, including water, sodas, juices, etc.","American","Chinese","Pizza/Italian","Soul Food","Chinese","Jewish/Kosher","Russian","Chinese","Spanish","Donuts","Hamburgers","Bakery","Chinese","Japanese","Donuts","Japanese","Other","Italian","Pizza","Spanish","Bagels/Pretzels","Caribbean","Donuts","Chinese","Sandwiches","Mexican","American","American","Pizza/Italian","Donuts","Mediterranean","Mediterranean","American","Italian","American","American","Pizza/Italian","Japanese","Pizza","Chicken","Pizza","American","American","Japanese","Pizza","Japanese","Italian","American","American","Mexican","Donuts","Turkish","American","Chinese","Chinese/Japanese","American","Irish","Japanese","Delicatessen","German","Vietnamese/Cambodian/Malaysia","Irish","Chinese","Mexican","Japanese","American","Chicken","CafÃ©/Coffee/Tea","Hamburgers","Irish","American","Pizza/Italian","American","Bakery","Jewish/Kosher","American","Mexican","American","Barbecue","Polish","Bakery","Chinese","Indian","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Chinese","Asian","Caribbean","Tex-Mex","Pizza","American","Sandwiches/Salads/Mixed Buffet","Mediterranean","American","Bakery","Thai","Steak","Pizza","Pizza","Italian","Juice, Smoothies, Fruit Salads","Spanish","Pizza","Pizza","Spanish","Bakery","American","Donuts","Mexican","CafÃ©/Coffee/Tea","Pizza","American","American","Japanese","American","Bangladeshi","Sandwiches","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Pizza","Caribbean","Korean","American","Sandwiches","CafÃ©/Coffee/Tea","Other","Steak","Pizza/Italian","American","Spanish","American","Italian","Turkish","CafÃ©/Coffee/Tea","Thai","Asian","Pizza/Italian","Turkish","Pizza","Italian","Chinese","Pizza/Italian","American"],"y":["BROOKLYN","MANHATTAN","QUEENS","BRONX","BRONX","QUEENS","MANHATTAN","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","BRONX","MANHATTAN","BRONX","QUEENS","BROOKLYN","QUEENS","QUEENS","MANHATTAN","BROOKLYN","QUEENS","MANHATTAN","QUEENS","BROOKLYN","MANHATTAN","MANHATTAN","BROOKLYN","BROOKLYN","MANHATTAN","BROOKLYN","STATEN ISLAND","QUEENS","MANHATTAN","BROOKLYN","MANHATTAN","BRONX","BRONX","MANHATTAN","MANHATTAN","BRONX","QUEENS","BROOKLYN","MANHATTAN","BRONX","MANHATTAN","QUEENS","BRONX","QUEENS","BROOKLYN","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","MANHATTAN","STATEN ISLAND","BROOKLYN","MANHATTAN","STATEN ISLAND","MANHATTAN","MANHATTAN","BROOKLYN","QUEENS","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","BROOKLYN","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","QUEENS","MANHATTAN","QUEENS","QUEENS","QUEENS","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","QUEENS","QUEENS","BRONX","QUEENS","MANHATTAN","MANHATTAN","MANHATTAN","BROOKLYN","QUEENS","QUEENS","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","BROOKLYN","MANHATTAN","QUEENS","MANHATTAN","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","QUEENS","MANHATTAN","BROOKLYN","MANHATTAN","BRONX","QUEENS","QUEENS","BROOKLYN","MANHATTAN","MANHATTAN","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","MANHATTAN","BRONX","BROOKLYN","BROOKLYN","QUEENS","MANHATTAN","BROOKLYN","BROOKLYN","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","BROOKLYN","BROOKLYN","MANHATTAN","BROOKLYN","MANHATTAN","QUEENS","BROOKLYN","QUEENS","MANHATTAN","QUEENS","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","QUEENS","BRONX","BROOKLYN","QUEENS","MANHATTAN","MANHATTAN","BROOKLYN","QUEENS","BROOKLYN","QUEENS","QUEENS","MANHATTAN","BROOKLYN","BROOKLYN","BROOKLYN"],"mode":"markers","type":"box","name":"Critical","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"line":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(252,141,98,0.5)","x":["Caribbean","American","Pizza/Italian","Vietnamese/Cambodian/Malaysia","Other","Other","Latin (Cuban, Dominican, Puerto Rican, South & Central American)"],"y":["QUEENS","QUEENS","STATEN ISLAND","BROOKLYN","BROOKLYN","MANHATTAN","QUEENS"],"mode":"markers","type":"box","name":"Not Applicable","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"line":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(141,160,203,0.5)","x":["Creole","American","American","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Bakery","Chinese","American","CafÃ©/Coffee/Tea","American","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","American","Spanish","Irish","Mexican","Italian","American","Chinese","Peruvian","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","American","Chinese","Caribbean","American","American","American","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Bottled beverages, including water, sodas, juices, etc.","American","Chinese","American","American","Spanish","Italian","American","Spanish","American","Mediterranean","Sandwiches/Salads/Mixed Buffet","CafÃ©/Coffee/Tea","Chinese","Juice, Smoothies, Fruit Salads","Japanese","Caribbean","Greek","Vietnamese/Cambodian/Malaysia","Caribbean","American","Italian","Chicken","Chinese","American","Bakery","Ice Cream, Gelato, Yogurt, Ices","Thai","Italian","Delicatessen","Chinese","American","CafÃ©/Coffee/Tea","Japanese","Chinese","Chinese","Bakery","Pizza","Chicken","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Chinese","American","Japanese","Tex-Mex","Italian","Mexican","Juice, Smoothies, Fruit Salads","Bakery","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Donuts","Pizza","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Chinese","Pizza","Chinese","Bangladeshi","CafÃ©/Coffee/Tea","Chinese","Eastern European","Jewish/Kosher","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Italian","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","American","Hamburgers","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Chinese","Juice, Smoothies, Fruit Salads","American","Caribbean","American","Indian","Irish","Italian","Ice Cream, Gelato, Yogurt, Ices","Jewish/Kosher","American","CafÃ©/Coffee/Tea","Jewish/Kosher","Caribbean","Seafood","Mexican","Latin (Cuban, Dominican, Puerto Rican, South & Central American)","CafÃ©/Coffee/Tea","Tapas","Jewish/Kosher","Chinese","Chinese","Chinese","Caribbean","Italian","Soups & Sandwiches","Pizza/Italian","Middle Eastern","Bakery","Mexican","Donuts","American","Spanish","American","Mexican","Japanese","American","American","Pizza"],"y":["BROOKLYN","BROOKLYN","STATEN ISLAND","MANHATTAN","BROOKLYN","QUEENS","BROOKLYN","MANHATTAN","MANHATTAN","QUEENS","BROOKLYN","BRONX","MANHATTAN","BROOKLYN","QUEENS","MANHATTAN","QUEENS","QUEENS","BRONX","QUEENS","STATEN ISLAND","BROOKLYN","QUEENS","BROOKLYN","QUEENS","BROOKLYN","QUEENS","BROOKLYN","QUEENS","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","BRONX","MANHATTAN","QUEENS","QUEENS","QUEENS","BROOKLYN","BROOKLYN","MANHATTAN","BRONX","QUEENS","BROOKLYN","BROOKLYN","BROOKLYN","MANHATTAN","BROOKLYN","BROOKLYN","MANHATTAN","QUEENS","QUEENS","BROOKLYN","MANHATTAN","BROOKLYN","QUEENS","MANHATTAN","BRONX","MANHATTAN","MANHATTAN","BRONX","BRONX","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","BROOKLYN","BROOKLYN","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","QUEENS","QUEENS","BRONX","BROOKLYN","MANHATTAN","BROOKLYN","BROOKLYN","QUEENS","MANHATTAN","MANHATTAN","MANHATTAN","MANHATTAN","QUEENS","MANHATTAN","QUEENS","BROOKLYN","QUEENS","QUEENS","BRONX","MANHATTAN","MANHATTAN","BROOKLYN","QUEENS","MANHATTAN","MANHATTAN","MANHATTAN","QUEENS","BROOKLYN","MANHATTAN","QUEENS","BROOKLYN","BRONX","STATEN ISLAND","MANHATTAN","QUEENS","BROOKLYN","BROOKLYN","MANHATTAN","MANHATTAN","QUEENS","QUEENS","MANHATTAN","MANHATTAN","BROOKLYN","BROOKLYN","MANHATTAN","MANHATTAN","BROOKLYN","MANHATTAN","MANHATTAN","BRONX","QUEENS","BRONX","MANHATTAN","QUEENS","MANHATTAN","MANHATTAN"],"mode":"markers","type":"box","name":"Not Critical","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"line":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="column-1" class="section level2" data-width="350">
+<h2>Column</h2>
+<div id="chart-b" class="section level3">
+<h3>Chart B</h3>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-446d807538b7e8e5a498" style="width:90%;height:576px;"></div>
+<script type="application/json" data-for="htmlwidget-446d807538b7e8e5a498">{"x":{"visdat":{"8a24630da18b":["function () ","plotlyVisDat"]},"cur_data":"8a24630da18b","attrs":{"8a24630da18b":{"x":{},"y":{},"mode":"markers","text":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"snow"},"yaxis":{"domain":[0,1],"automargin":true,"title":"id","type":"category","categoryorder":"array","categoryarray":["USC00300023","USC00300055","USC00300093","USC00300183","USC00300331","USC00300343","USC00300360","USC00300443","USC00300448","USC00300668","USC00300766","USC00300785","USC00300870","USC00300937","USC00301095","USC00301110","USC00301152","USC00301401","USC00301595","USC00301761","USC00301787","USC00301966","USC00301974","USC00302366","USC00302554","USC00302610","USC00302627","USC00303124","USC00303152","USC00303259","USC00303284","USC00303354","USC00303955","USC00304025","USC00304174","USC00304575","USC00304647","USC00304791","USC00304808","USC00304996","USC00305233","USC00305377","USC00305426","USC00305512","USC00305597","USC00305714","USC00305804","USC00305821","USC00305840","USC00306085","USC00306184","USC00306314","USC00306464","USC00306517","USC00306538","USC00306659","USC00306774","USC00306820","USC00306839","USC00307035","USC00307134","USC00307400","USC00307405","USC00307514","USC00307587","USC00307633","USC00307799","USC00308248","USC00308304","USC00308317","USC00308627","USC00308742","USC00308746","USC00308936","USC00308962","USC00309000","USC00309292","USC00309670","USW00004725","USW00004781","USW00014733","USW00014735","USW00014743","USW00014757","USW00014768","USW00014771","USW00094725","USW00094789","USW00094790","USW00094794"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,36,0,0,0,51,0,0,0,0,0,0,0,13,23,76,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,25,0,0,102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"y":["USC00300023","USC00300023","USC00304791","USC00307134","USC00308304","USW00004781","USC00301110","USC00303955","USW00014768","USC00300183","USW00014743","USC00302610","USW00094789","USC00300343","USC00300448","USC00308746","USC00305804","USC00305426","USC00302627","USC00300443","USW00014733","USC00301095","USC00304025","USC00306184","USC00304174","USC00305377","USC00308742","USC00301595","USC00304996","USW00094789","USC00300343","USC00300360","USC00308962","USC00305597","USC00304575","USC00307587","USC00306184","USC00304647","USC00309000","USC00301761","USC00303259","USC00305233","USC00303284","USC00301974","USC00300093","USC00300343","USW00094725","USC00300785","USW00004725","USC00305714","USC00300183","USC00306517","USC00308962","USW00014735","USC00309000","USC00308962","USC00305840","USC00307633","USC00306820","USC00305512","USC00302366","USC00301974","USC00304025","USC00305597","USC00307035","USC00300668","USC00306464","USC00300766","USW00014743","USC00301966","USC00300870","USW00094790","USC00306774","USW00094794","USW00014757","USC00306314","USC00302554","USC00306659","USC00308936","USC00301595","USC00306085","USC00306538","USC00309670","USC00303152","USC00303354","USC00300183","USW00014771","USC00304808","USC00308248","USW00014768","USC00308317","USC00307405","USC00308627","USC00300937","USC00304575","USC00306839","USC00309000","USC00305512","USC00305426","USC00306184","USC00306184","USC00308304","USC00305821","USC00301110","USC00304025","USC00300343","USC00309292","USC00303124","USC00300443","USC00300055","USC00307514","USC00305714","USC00306538","USC00303259","USC00300331","USC00301787","USC00301974","USC00308627","USW00014757","USC00300448","USC00305840","USC00301401","USC00307799","USC00301401","USC00300343","USC00301152","USC00307400","USC00300937","USC00302610"],"mode":"markers","text":["IDUSC00300023","IDUSC00300023","IDUSC00304791","IDUSC00307134","IDUSC00308304","IDUSW00004781","IDUSC00301110","IDUSC00303955","IDUSW00014768","IDUSC00300183","IDUSW00014743","IDUSC00302610","IDUSW00094789","IDUSC00300343","IDUSC00300448","IDUSC00308746","IDUSC00305804","IDUSC00305426","IDUSC00302627","IDUSC00300443","IDUSW00014733","IDUSC00301095","IDUSC00304025","IDUSC00306184","IDUSC00304174","IDUSC00305377","IDUSC00308742","IDUSC00301595","IDUSC00304996","IDUSW00094789","IDUSC00300343","IDUSC00300360","IDUSC00308962","IDUSC00305597","IDUSC00304575","IDUSC00307587","IDUSC00306184","IDUSC00304647","IDUSC00309000","IDUSC00301761","IDUSC00303259","IDUSC00305233","IDUSC00303284","IDUSC00301974","IDUSC00300093","IDUSC00300343","IDUSW00094725","IDUSC00300785","IDUSW00004725","IDUSC00305714","IDUSC00300183","IDUSC00306517","IDUSC00308962","IDUSW00014735","IDUSC00309000","IDUSC00308962","IDUSC00305840","IDUSC00307633","IDUSC00306820","IDUSC00305512","IDUSC00302366","IDUSC00301974","IDUSC00304025","IDUSC00305597","IDUSC00307035","IDUSC00300668","IDUSC00306464","IDUSC00300766","IDUSW00014743","IDUSC00301966","IDUSC00300870","IDUSW00094790","IDUSC00306774","IDUSW00094794","IDUSW00014757","IDUSC00306314","IDUSC00302554","IDUSC00306659","IDUSC00308936","IDUSC00301595","IDUSC00306085","IDUSC00306538","IDUSC00309670","IDUSC00303152","IDUSC00303354","IDUSC00300183","IDUSW00014771","IDUSC00304808","IDUSC00308248","IDUSW00014768","IDUSC00308317","IDUSC00307405","IDUSC00308627","IDUSC00300937","IDUSC00304575","IDUSC00306839","IDUSC00309000","IDUSC00305512","IDUSC00305426","IDUSC00306184","IDUSC00306184","IDUSC00308304","IDUSC00305821","IDUSC00301110","IDUSC00304025","IDUSC00300343","IDUSC00309292","IDUSC00303124","IDUSC00300443","IDUSC00300055","IDUSC00307514","IDUSC00305714","IDUSC00306538","IDUSC00303259","IDUSC00300331","IDUSC00301787","IDUSC00301974","IDUSC00308627","IDUSW00014757","IDUSC00300448","IDUSC00305840","IDUSC00301401","IDUSC00307799","IDUSC00301401","IDUSC00300343","IDUSC00301152","IDUSC00307400","IDUSC00300937","IDUSC00302610"],"type":"bar","orientation":"h","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="chart-c" class="section level3">
+<h3>Chart C</h3>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f8392e0b898a20a18218" style="width:90%;height:576px;"></div>
+<script type="application/json" data-for="htmlwidget-f8392e0b898a20a18218">{"x":{"visdat":{"8a2413e8df7b":["function () ","plotlyVisDat"]},"cur_data":"8a2413e8df7b","attrs":{"8a2413e8df7b":{"x":{},"y":{},"mode":"markers","text":{},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"product_id"},"yaxis":{"domain":[0,1],"automargin":true,"title":"user_id"},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[29405,20114,21019,32139,31486,23088,39041,7021,13512,9076,41065,28204,41290,10385,41912,1155,2480,36869,13496,34429,43920,22935,22825,12206,43768,1700,30817,35951,43772,38768,24838,29370,35547,19478,22035,1244,7828,45007,23211,36036,45364,42193,48775,29104,30305,6774,10246,27246,9825,17835,48192,9018,29439,49079,28204,20127,47672,13984,21689,47222,40910,196,27877,46979,38539,41220,45483,26648,31717,47766,43183,20940,16900,47766,11440,26842,13991,39980,49401,37258,5785,28156,47990,12549,8021,40396,24850,34243,6692,40064,31683,28458,35169,20600,39275,36550,30391,13974,28204,33443,48679,16570,13176,34243,17579,21938,24184,2078,28928,20457,44142,12955,26209,6740,40756,14575,34969,12741,45311,44765,18023,47570,19938,10193,8366,25371,17131,5876,45066,34487,35886,31506,21936,33894,32134,30561,21903,31766,9804,28201,16589,2825,16349,13944,27750,14399,36011,38995,36735,49235,21137,13712,24852,24852,21903,11130,36772,8460,41844,33575,37923,26604,42625,27966,48919,35072,20995,2232,46979,17409,35550,9020,30450,11520,42500,38455,36307,20591,9534,23165,2210,5618,30391,22935,19691,8048,42139,43749,7746,49520,24852,14477,48142,42315,23593,45167,28199,21137,21616,23734],"y":[174042,20397,122977,124617,5081,230,204014,66366,107525,134097,122246,139389,101300,31756,106368,67895,100363,113419,61955,194973,145099,177247,112418,149624,163031,93557,124700,20075,86239,73792,95201,66016,169907,177862,61989,173630,43945,59514,56578,71425,121434,199891,138292,37011,110014,134458,199771,79168,40357,185677,176891,17789,44556,88733,201104,15794,105645,66721,99312,157250,86857,182200,84397,85798,26354,83788,188315,204860,63315,186466,162063,36097,147173,84179,126281,200603,78698,11340,102182,46621,35126,98083,178966,123378,153531,165097,191282,195359,67504,132249,69404,48800,4987,17253,175242,71481,190319,65641,126494,33250,148906,189445,38759,193448,53728,803,171971,140749,37944,68377,846,32219,92508,229,5105,131621,88681,138454,102646,160252,124504,2541,75871,35471,36489,189192,88813,92749,203016,151220,24269,190942,14022,53334,205701,60601,140013,85229,119661,130895,144799,176970,108206,184523,91667,174979,56318,45754,74912,50823,66473,124876,900,93224,178543,35332,33931,149139,47640,153915,58909,149496,147259,146469,43822,94404,11656,5312,129168,34308,65404,567,102578,85025,175518,65906,47634,131915,76579,191101,51405,123911,17318,68497,48432,37078,138549,151181,180961,28912,112058,132163,139785,65364,144380,196932,174136,23250,117570,168418],"mode":"markers","text":["product_id29405 user_number 174042","product_id20114 user_number 20397","product_id21019 user_number 122977","product_id32139 user_number 124617","product_id31486 user_number 5081","product_id23088 user_number 230","product_id39041 user_number 204014","product_id7021 user_number 66366","product_id13512 user_number 107525","product_id9076 user_number 134097","product_id41065 user_number 122246","product_id28204 user_number 139389","product_id41290 user_number 101300","product_id10385 user_number 31756","product_id41912 user_number 106368","product_id1155 user_number 67895","product_id2480 user_number 100363","product_id36869 user_number 113419","product_id13496 user_number 61955","product_id34429 user_number 194973","product_id43920 user_number 145099","product_id22935 user_number 177247","product_id22825 user_number 112418","product_id12206 user_number 149624","product_id43768 user_number 163031","product_id1700 user_number 93557","product_id30817 user_number 124700","product_id35951 user_number 20075","product_id43772 user_number 86239","product_id38768 user_number 73792","product_id24838 user_number 95201","product_id29370 user_number 66016","product_id35547 user_number 169907","product_id19478 user_number 177862","product_id22035 user_number 61989","product_id1244 user_number 173630","product_id7828 user_number 43945","product_id45007 user_number 59514","product_id23211 user_number 56578","product_id36036 user_number 71425","product_id45364 user_number 121434","product_id42193 user_number 199891","product_id48775 user_number 138292","product_id29104 user_number 37011","product_id30305 user_number 110014","product_id6774 user_number 134458","product_id10246 user_number 199771","product_id27246 user_number 79168","product_id9825 user_number 40357","product_id17835 user_number 185677","product_id48192 user_number 176891","product_id9018 user_number 17789","product_id29439 user_number 44556","product_id49079 user_number 88733","product_id28204 user_number 201104","product_id20127 user_number 15794","product_id47672 user_number 105645","product_id13984 user_number 66721","product_id21689 user_number 99312","product_id47222 user_number 157250","product_id40910 user_number 86857","product_id196 user_number 182200","product_id27877 user_number 84397","product_id46979 user_number 85798","product_id38539 user_number 26354","product_id41220 user_number 83788","product_id45483 user_number 188315","product_id26648 user_number 204860","product_id31717 user_number 63315","product_id47766 user_number 186466","product_id43183 user_number 162063","product_id20940 user_number 36097","product_id16900 user_number 147173","product_id47766 user_number 84179","product_id11440 user_number 126281","product_id26842 user_number 200603","product_id13991 user_number 78698","product_id39980 user_number 11340","product_id49401 user_number 102182","product_id37258 user_number 46621","product_id5785 user_number 35126","product_id28156 user_number 98083","product_id47990 user_number 178966","product_id12549 user_number 123378","product_id8021 user_number 153531","product_id40396 user_number 165097","product_id24850 user_number 191282","product_id34243 user_number 195359","product_id6692 user_number 67504","product_id40064 user_number 132249","product_id31683 user_number 69404","product_id28458 user_number 48800","product_id35169 user_number 4987","product_id20600 user_number 17253","product_id39275 user_number 175242","product_id36550 user_number 71481","product_id30391 user_number 190319","product_id13974 user_number 65641","product_id28204 user_number 126494","product_id33443 user_number 33250","product_id48679 user_number 148906","product_id16570 user_number 189445","product_id13176 user_number 38759","product_id34243 user_number 193448","product_id17579 user_number 53728","product_id21938 user_number 803","product_id24184 user_number 171971","product_id2078 user_number 140749","product_id28928 user_number 37944","product_id20457 user_number 68377","product_id44142 user_number 846","product_id12955 user_number 32219","product_id26209 user_number 92508","product_id6740 user_number 229","product_id40756 user_number 5105","product_id14575 user_number 131621","product_id34969 user_number 88681","product_id12741 user_number 138454","product_id45311 user_number 102646","product_id44765 user_number 160252","product_id18023 user_number 124504","product_id47570 user_number 2541","product_id19938 user_number 75871","product_id10193 user_number 35471","product_id8366 user_number 36489","product_id25371 user_number 189192","product_id17131 user_number 88813","product_id5876 user_number 92749","product_id45066 user_number 203016","product_id34487 user_number 151220","product_id35886 user_number 24269","product_id31506 user_number 190942","product_id21936 user_number 14022","product_id33894 user_number 53334","product_id32134 user_number 205701","product_id30561 user_number 60601","product_id21903 user_number 140013","product_id31766 user_number 85229","product_id9804 user_number 119661","product_id28201 user_number 130895","product_id16589 user_number 144799","product_id2825 user_number 176970","product_id16349 user_number 108206","product_id13944 user_number 184523","product_id27750 user_number 91667","product_id14399 user_number 174979","product_id36011 user_number 56318","product_id38995 user_number 45754","product_id36735 user_number 74912","product_id49235 user_number 50823","product_id21137 user_number 66473","product_id13712 user_number 124876","product_id24852 user_number 900","product_id24852 user_number 93224","product_id21903 user_number 178543","product_id11130 user_number 35332","product_id36772 user_number 33931","product_id8460 user_number 149139","product_id41844 user_number 47640","product_id33575 user_number 153915","product_id37923 user_number 58909","product_id26604 user_number 149496","product_id42625 user_number 147259","product_id27966 user_number 146469","product_id48919 user_number 43822","product_id35072 user_number 94404","product_id20995 user_number 11656","product_id2232 user_number 5312","product_id46979 user_number 129168","product_id17409 user_number 34308","product_id35550 user_number 65404","product_id9020 user_number 567","product_id30450 user_number 102578","product_id11520 user_number 85025","product_id42500 user_number 175518","product_id38455 user_number 65906","product_id36307 user_number 47634","product_id20591 user_number 131915","product_id9534 user_number 76579","product_id23165 user_number 191101","product_id2210 user_number 51405","product_id5618 user_number 123911","product_id30391 user_number 17318","product_id22935 user_number 68497","product_id19691 user_number 48432","product_id8048 user_number 37078","product_id42139 user_number 138549","product_id43749 user_number 151181","product_id7746 user_number 180961","product_id49520 user_number 28912","product_id24852 user_number 112058","product_id14477 user_number 132163","product_id48142 user_number 139785","product_id42315 user_number 65364","product_id23593 user_number 144380","product_id45167 user_number 196932","product_id28199 user_number 174136","product_id21137 user_number 23250","product_id21616 user_number 117570","product_id23734 user_number 168418"],"type":"scatter","marker":{"colorbar":{"title":"add_to_cart_order","ticklen":2},"cmin":1,"cmax":33,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[2,3,9,20,3,5,30,10,6,10,10,1,3,3,12,10,2,2,5,6,1,5,6,18,7,7,12,3,5,1,3,8,12,6,15,15,10,2,5,4,9,14,12,9,8,1,22,2,5,6,6,3,18,9,3,17,4,12,9,22,7,1,6,33,4,2,3,6,5,3,10,1,2,7,18,22,9,21,10,15,2,13,3,2,23,23,5,6,2,1,15,11,21,8,3,15,14,2,3,1,11,20,13,9,7,13,10,16,9,1,5,6,5,8,24,12,11,8,2,1,1,2,7,9,11,2,25,4,14,5,5,5,8,16,6,9,12,2,26,4,1,8,10,26,6,10,5,11,13,7,1,2,10,2,11,9,16,15,14,4,2,6,6,2,16,13,3,19,2,11,6,8,3,6,1,8,2,9,12,1,7,17,7,23,1,1,29,5,6,2,2,6,2,8,8,24,22,3,12,6],"line":{"colorbar":{"title":"","ticklen":2},"cmin":1,"cmax":33,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[2,3,9,20,3,5,30,10,6,10,10,1,3,3,12,10,2,2,5,6,1,5,6,18,7,7,12,3,5,1,3,8,12,6,15,15,10,2,5,4,9,14,12,9,8,1,22,2,5,6,6,3,18,9,3,17,4,12,9,22,7,1,6,33,4,2,3,6,5,3,10,1,2,7,18,22,9,21,10,15,2,13,3,2,23,23,5,6,2,1,15,11,21,8,3,15,14,2,3,1,11,20,13,9,7,13,10,16,9,1,5,6,5,8,24,12,11,8,2,1,1,2,7,9,11,2,25,4,14,5,5,5,8,16,6,9,12,2,26,4,1,8,10,26,6,10,5,11,13,7,1,2,10,2,11,9,16,15,14,4,2,6,6,2,16,13,3,19,2,11,6,8,3,6,1,8,2,9,12,1,7,17,7,23,1,1,29,5,6,2,2,6,2,8,8,24,22,3,12,6]}},"xaxis":"x","yaxis":"y","frame":null},{"x":[196,49520],"y":[229,205701],"type":"scatter","mode":"markers","opacity":0,"hoverinfo":"none","showlegend":false,"marker":{"colorbar":{"title":"add_to_cart_order","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"cmin":1,"cmax":33,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"color":[1,33],"line":{"color":"rgba(255,127,14,1)"}},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+</div>
+
+<script>
+$(document).ready(function() {
+  // add bootstrap table styles to pandoc tables
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed table-sm');
+
+  // initialize mathjax
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+  FlexDashboard.init({
+    fillPage: true,
+    orientation: "columns",
+    storyboard: false,
+    defaultFigWidth: 576,
+    defaultFigHeight: 460,
+    defaultFigWidthMobile: 360,
+    defaultFigHeightMobile: 460,
+    resize_reload: true
+  });
+  var navbar = $(".navbar").first();
+  var body = $("body").first();
+  var sidebar = $(".section.sidebar").first();
+  function addNavbarPadding() {
+    var navHeight = navbar.outerHeight();
+    body.css("padding-top", (navHeight + 8) + "px");
+    sidebar.css("top", navHeight + "px");
+    var resizeEvent = window.document.createEvent("UIEvents");
+    resizeEvent.initUIEvent("resize", true, false, window, 0);
+    window.dispatchEvent(resizeEvent);
+  }
+  if (!window.Shiny) setTimeout(addNavbarPadding, 100);
+  $(document).on("shiny:idle", function() {
+    setTimeout(addNavbarPadding, 50);
+  });
+});
+</script>
+
+</body>
+</html>

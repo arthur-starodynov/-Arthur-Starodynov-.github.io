@@ -11,6 +11,8 @@ navbar:
       href: https://github.com/arthur-starodynov/Compiled_Projects
     - icon: fa-brands fa-linkedin-in
       href: https://www.linkedin.com/in/arthur-starodynov/
+    - text: P8105 Dashboard
+      href: dashboard_template.html
 output:
   html_document:
     theme: yeti
